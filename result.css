@@ -1,0 +1,18 @@
+.table {
+    margin: 1em 0;
+    min-width: 300px;
+    
+    tr {
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+      display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!   
+    }
+    
+    td {
+      display: block; 
+      
+      
+    }
