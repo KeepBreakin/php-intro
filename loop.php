@@ -38,7 +38,7 @@ $array = [
 
             </tbody>
             <?php
-            $link = '#';
+            $link = 'www.google.be/';
             foreach ($array as $row) {
                 echo "<tr>";
                 echo "<td><a href='$link'>" . $row['tv-show'] . " </a></td>";
