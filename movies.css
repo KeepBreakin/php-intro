@@ -32,7 +32,7 @@ input[type="text"],
   border: 1px solid rgba(0, 0, 0, 0.02);
   outline: none;
 }
-.btn-submit {
+.btn-submit, .btn-get {
   background-color: green;
   border: none;
   padding: 10px 50px 10px 50px;
@@ -40,10 +40,10 @@ input[type="text"],
   border: 1px solid rgba(0, 0, 0, 0.02);
   border-radius: 20px;
   cursor: pointer;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
-.btn-get {
+.btn-show{
   background-color: green;
   border: none;
   padding: 10px 50px 10px 50px;
@@ -51,7 +51,11 @@ input[type="text"],
   border: 1px solid rgba(0, 0, 0, 0.02);
   border-radius: 20px;
   cursor: pointer;
+  margin-top: 10px;
+  
 }
+
+
 
 .soort {
   margin: 20px 0px 20px 0px;

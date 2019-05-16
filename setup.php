@@ -10,6 +10,16 @@ if (isset($_POST['submit'])) {
     $soort = $_POST['soort'];
 
 
+
+    //     foreach ($_POST as $value) {
+    //         print "<pre>";
+    // print_r($value);
+    // print "</pre>";
+    //     }
+
+
+
+
     //if fields empty show errorMsg through SESSION otherwise execute QUERY 
     if (empty($titel) || empty($score) || empty($soort)) {
         $_SESSION['emptyFields'] = 'There are some empty fields';
@@ -27,13 +37,9 @@ if (isset($_POST['submit'])) {
 
         if ($stmt) {
             $_SESSION['addRecord'] = 'Record succesfully submitted';
-            $capnum = 0;
-            $capnum++;
-            $_SESSION['capnum'] = $capnum;
+            header('Location:result.php');
         }
     }
-
-    
 }
 
 ?>
@@ -55,9 +61,6 @@ if (isset($_POST['submit'])) {
     <div class="container">
         <form method="post" action="setup.php">
             <div class="form-input"><input type="text" name="titel" placeholder="Titel" /> </div>
-            <?php if (isset($_SESSION['capnum'])) {
-            echo $_SESSION['capnum'];
-        } ?>
             <div class="form-input"><input type="number" name="score" placeholder="Score" min=0 max=10 /> </div>
             <div class="form-input"><select name="soort" class="soort">
                     <option value="Movie">Movie</option>
@@ -68,10 +71,6 @@ if (isset($_POST['submit'])) {
 
         </form>
 
-        <form action="result.php" method="get">
-            <button type="submit" name="submit" class="btn-get">Show all records</button>
-
-        </form>
 
         <?php
         if (isset($_SESSION['emptyFields'])) {

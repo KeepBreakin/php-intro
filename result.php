@@ -1,11 +1,10 @@
 <?php
 require_once('dbconnect.php');
 
-if (isset($_GET['submit'])) {
-    $sql = "SELECT * FROM Top ORDER BY score DESC";
+
+    $sql = "SELECT * FROM Top ORDER BY score DESC LIMIT 5";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
-}
 
 
 ?>
